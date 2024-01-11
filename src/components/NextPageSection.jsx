@@ -44,7 +44,7 @@ const NextPageSection = () => {
           })}
         </div>
 
-        <div className=" py-[6px] pl-3 pr-[6px] flex gap-[6px] items-center">
+        <div className=" py-[6px] pl-3 pr-[6px] flex gap-[6px] items-center border border-[#D9D9D9] rounded">
           <p className=" font-Inter text-[14px] not-italic font-medium leading-5 text-[#4D4D4D] py-[1px]">
             Next
           </p>

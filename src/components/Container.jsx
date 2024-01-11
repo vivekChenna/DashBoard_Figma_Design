@@ -9,7 +9,7 @@ const Container = () => {
     <div className=" px-8 pt-8">
       <OverViewSection />
       <OrdersAndAmount />
-        <AllTransactions/>
+      <AllTransactions />
     </div>
   );
 };

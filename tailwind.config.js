@@ -5,7 +5,11 @@ export default {
     fontFamily: {
       Inter: ["Inter", "sans-serif"],
     },
-    extend: {},
+    extend: {
+      backgroundImage: {
+        Nishyan: "url(./src/assets/Images/NishyanIcon.png)",
+      },
+    },
   },
   plugins: [],
 };
