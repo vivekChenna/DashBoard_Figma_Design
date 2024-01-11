@@ -4,7 +4,7 @@ import Container from "./Container";
 
 const MainContainer = () => {
   return (
-    <div className="flex flex-col bg-[#FAFAFA]">
+    <div className="flex flex-col h-[1482px] bg-[#FAFAFA]">
       <Header />
       <Container />
     </div>
