@@ -1,11 +1,7 @@
 import Body from "./components/Body.jsx";
 
 function App() {
-  return (
-    <>
-      <Body />
-    </>
-  );
+  return <Body />;
 }
 
 export default App;

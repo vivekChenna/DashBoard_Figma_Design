@@ -16,7 +16,7 @@ import WalletIcon from "../assets/Images/walletIcon.png";
 
 const SideBar = () => {
   return (
-    <div className=" w-[224px] bg-[#1E2640] h-[1482px] py-4 px-[10px] flex flex-col justify-between">
+    <div className=" sticky top-0 w-[224px] bg-[#1E2640] h-[1482px] py-4 px-[10px] flex flex-col justify-between">
       <div className=" flex flex-col">
         <div className=" w-[192px] mx-2 flex gap-3 items-center">
           <div className=" w-[39px] h-[39px]">
