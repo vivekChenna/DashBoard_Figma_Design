@@ -6,11 +6,12 @@ import AllOrders from "./AllOrders";
 import NextPageSection from "./NextPageSection";
 
 const TransactionsRecord = () => {
+  // shadow-[0px 2px 6px 0px rgba(26, 24, 30, 0.04)]
   return (
-    <div className="mt-[20px] px-3 pt-3 pb-6 bg-white rounded-lg relative shadow-[0px 2px 6px 0px rgba(26, 24, 30, 0.04)]">
+    <div className="mt-[20px] px-3 pt-3 pb-6 bg-white rounded-lg relative  shadow-[0px 2px 6px 0px rgba(26, 24, 30, 0.04)]">
       {/*search by order id div  */}
 
-      <div className=" w-60 px-4 py-[10px] flex gap-2 flex-1 items-center border border-[#D9D9D9] rounded-md">
+      <div className=" w-60 px-4 py-[10px] flex gap-2 flex-1 items-center border border-[#D9D9D9] rounded-md ">
         <div className=" w-[14px] h-[14px]">
           <img src={BoldSearch} alt="search-img" />
         </div>
