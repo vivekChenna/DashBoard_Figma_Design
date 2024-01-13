@@ -1,9 +1,30 @@
-import React from "react";
+import React, { useContext, useEffect, useState } from "react";
 import InfoImg from "../assets/Images/Info.png";
 import TriangleIcon from "../assets/Images/Triangle-Icon.png";
 import SingleOrder from "./SingleOrder";
+import { UserData } from "../constants/constant";
 
-const AllOrders = () => {
+const AllOrders = ({
+  inputSearch,
+  userData,
+  setUserData,
+  startIndex,
+  endIndex,
+}) => {
+  const currentData = UserData.slice(startIndex, endIndex);
+
+  useEffect(() => {
+    filterUserData(currentData, inputSearch);
+  }, [inputSearch]);
+
+  const filterUserData = (userData, inputSearch) => {
+    const result = userData.filter((data) => {
+      return data._id.includes(inputSearch);
+    });
+
+    setUserData(result);
+  };
+
   return (
     <div className=" mt-3">
       {/* heading div */}
@@ -40,11 +61,9 @@ const AllOrders = () => {
       </div>
 
       <div>
-        {Array(19)
-          .fill("")
-          .map(() => {
-            return <SingleOrder />;
-          })}
+        {userData.map((data) => {
+          return <SingleOrder key={data._id} {...data} />;
+        })}
       </div>
     </div>
   );

@@ -13,10 +13,22 @@ import ToolsIcon from "../assets/Images/Tools_Icon.png";
 import AppearanceIcon from "../assets/Images/Appearance_Icon.png";
 import UserIcon from "../assets/Images/UserIcon.png";
 import WalletIcon from "../assets/Images/walletIcon.png";
+import { useContext } from "react";
+import Context from "../context/context.js";
 
 const SideBar = () => {
+  // flex flex-col justify-between
+
+  const { isSideBarOpen } = useContext(Context);
+
   return (
-    <div className=" sticky top-0 w-[224px] bg-[#1E2640] h-[1482px] py-4 px-[10px] flex flex-col justify-between">
+    <div
+      className={
+        isSideBarOpen
+          ? ` h-screen sticky top-0 block lg:block w-[224px] bg-[#1E2640] py-4 px-[10px]`
+          : `hidden md:block sticky top-0 w-[224px] bg-[#1E2640] py-4 px-[10px] h-screen`
+      }
+    >
       <div className=" flex flex-col">
         <div className=" w-[192px] mx-2 flex gap-3 items-center">
           <div className=" w-[39px] h-[39px]">
@@ -37,107 +49,107 @@ const SideBar = () => {
           </div>
         </div>
 
-        <div className=" px-4 py-2 flex gap-3 flex-1 items-center mt-[24px]">
+        <button className=" px-4 py-2 flex gap-3 flex-1 items-center mt-[24px] hover:bg-[#FFFFFF1A] rounded ">
           <div className=" w-[20px] h-[20px]">
             <img src={NavbarIcon} alt="navbar-icon" />
           </div>
-          <p className=" text-[14px] not-italic font-Inter font-medium leading-5 text-[#FFF] opacity-80">
+          <p className=" text-[14px] not-italic font-Inter font-medium leading-5 text-[#FFF] opacity-80 hover:opacity-100">
             Home
           </p>
-        </div>
+        </button>
 
-        <div className=" px-4 py-2 flex gap-3 flex-1 items-center mt-1">
+        <button className=" px-4 py-2 flex gap-3 flex-1 items-center mt-2 hover:bg-[#FFFFFF1A] rounded">
           <div className=" w-[20px] h-[20px]">
             <img src={OrdersIcon} alt="Orders-icon" />
           </div>
-          <p className=" text-[14px] not-italic font-Inter font-medium leading-5 text-[#FFF] opacity-80">
+          <p className=" text-[14px] not-italic font-Inter font-medium leading-5 text-[#FFF] opacity-80 hover:opacity-100">
             Orders
           </p>
-        </div>
+        </button>
 
-        <div className=" px-4 py-2 flex gap-3 flex-1 items-center mt-1">
+        <button className=" px-4 py-2 flex gap-3 flex-1 items-center mt-2 hover:bg-[#FFFFFF1A] rounded">
           <div className=" w-[20px] h-[20px]">
             <img src={ProductsIcon} alt="products-icon" />
           </div>
-          <p className=" text-[14px] not-italic font-Inter font-medium leading-5 text-[#FFF] opacity-80">
+          <p className=" text-[14px] not-italic font-Inter font-medium leading-5 text-[#FFF] opacity-80 hover:opacity-100">
             Products
           </p>
-        </div>
+        </button>
 
-        <div className=" px-4 py-2 flex gap-3 flex-1 items-center mt-1">
+        <button className=" px-4 py-2 flex gap-3 flex-1 items-center mt-2 hover:bg-[#FFFFFF1A] rounded">
           <div className=" w-[20px] h-[20px]">
             <img src={DeliveryIcon} alt="delivery-icon" />
           </div>
-          <p className=" text-[14px] not-italic font-Inter font-medium leading-5 text-[#FFF] opacity-80">
+          <p className=" text-[14px] not-italic font-Inter font-medium leading-5 text-[#FFF] opacity-80 hover:opacity-100">
             Delivery
           </p>
-        </div>
+        </button>
 
-        <div className=" px-4 py-2 flex gap-3 flex-1 items-center mt-1">
+        <button className=" px-4 py-2 flex gap-3 flex-1 items-center mt-2 hover:bg-[#FFFFFF1A] rounded">
           <div className=" w-[20px] h-[20px]">
             <img src={MarketingIcon} alt="marketing-icon" />
           </div>
-          <p className=" text-[14px] not-italic font-Inter font-medium leading-5 text-[#FFF] opacity-80">
+          <p className=" text-[14px] not-italic font-Inter font-medium leading-5 text-[#FFF] opacity-80 hover:opacity-100">
             Marketing
           </p>
-        </div>
+        </button>
 
-        <div className=" px-4 py-2 flex gap-3 flex-1 items-center mt-1 bg-[#FFFFFF1A] rounded">
+        <button className=" px-4 py-2 flex gap-3 flex-1 items-center mt-2 hover:bg-[#FFFFFF1A] rounded">
           <div className=" w-[20px] h-[20px]">
             <img src={PaymentsIcon} alt="payments-icon" />
           </div>
-          <p className=" text-[14px] not-italic font-Inter font-medium leading-5 text-[#FFF]">
+          <p className="text-[14px] not-italic font-Inter font-medium leading-5 text-[#FFF] opacity-80 hover:opacity-100">
             Payments
           </p>
-        </div>
+        </button>
 
-        <div className=" px-4 py-2 flex gap-3 flex-1 items-center mt-1">
+        <button className=" px-4 py-2 flex gap-3 flex-1 items-center mt-2 hover:bg-[#FFFFFF1A] rounded">
           <div className=" w-[20px] h-[20px]">
             <img src={ToolsIcon} alt="tools-icon" />
           </div>
-          <p className=" text-[14px] not-italic font-Inter font-medium leading-5 text-[#FFF] opacity-80">
+          <p className=" text-[14px] not-italic font-Inter font-medium leading-5 text-[#FFF] opacity-80 hover:opacity-100">
             Tools
           </p>
-        </div>
+        </button>
 
-        <div className=" px-4 py-2 flex gap-3 flex-1 items-center mt-1">
+        <button className=" px-4 py-2 flex gap-3 flex-1 items-center mt-2 hover:bg-[#FFFFFF1A] rounded">
           <div className=" w-[20px] h-[20px]">
             <img src={DiscountsIcon} alt="discounts-icon" />
           </div>
-          <p className=" text-[14px] not-italic font-Inter font-medium leading-5 text-[#FFF] opacity-80">
+          <p className=" text-[14px] not-italic font-Inter font-medium leading-5 text-[#FFF] opacity-80 hover:opacity-100">
             Discounts
           </p>
-        </div>
+        </button>
 
-        <div className=" px-4 py-2 flex gap-3 flex-1 items-center mt-1">
+        <button className=" px-4 py-2 flex gap-3 flex-1 items-center mt-2 hover:bg-[#FFFFFF1A] rounded">
           <div className=" w-[20px] h-[20px]">
             <img src={UserIcon} alt="user-icon" />
           </div>
-          <p className=" text-[14px] not-italic font-Inter font-medium leading-5 text-[#FFF] opacity-80">
+          <p className=" text-[14px] not-italic font-Inter font-medium leading-5 text-[#FFF] opacity-80 hover:opacity-100">
             Audience
           </p>
-        </div>
+        </button>
 
-        <div className=" px-4 py-2 flex gap-3 flex-1 items-center mt-1">
+        <button className=" px-4 py-2 flex gap-3 flex-1 items-center mt-2 hover:bg-[#FFFFFF1A] rounded">
           <div className=" w-[20px] h-[20px]">
             <img src={AppearanceIcon} alt="appearance-icon" />
           </div>
-          <p className=" text-[14px] not-italic font-Inter font-medium leading-5 text-[#FFF] opacity-80">
+          <p className=" text-[14px] not-italic font-Inter font-medium leading-5 text-[#FFF] opacity-80 hover:opacity-100">
             Appearance
           </p>
-        </div>
+        </button>
 
-        <div className=" px-4 py-2 flex gap-3 flex-1 items-center mt-1">
+        <button className=" px-4 py-2 flex gap-3 flex-1 items-center mt-2 hover:bg-[#FFFFFF1A] rounded">
           <div className=" w-[20px] h-[20px]">
             <img src={PluginIcon} alt="plugins-icon" />
           </div>
-          <p className=" text-[14px] not-italic font-Inter font-medium leading-5 text-[#FFF] opacity-80">
+          <p className=" text-[14px] not-italic font-Inter font-medium leading-5 text-[#FFF] opacity-80 hover:opacity-100">
             Plugins
           </p>
-        </div>
+        </button>
       </div>
 
-      <div className="px-3 py-[6px] mx-2 bg-[#353C53] flex gap-3 rounded">
+      <div className=" my-auto md:mt-[150px] px-3 py-[6px] mx-2 bg-[#353C53] flex gap-3 rounded">
         <div className=" w-9 h-9 p-[6px] bg-[#FFFFFF1A] rounded">
           <img src={WalletIcon} alt="wallet-icon" />
         </div>
