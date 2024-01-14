@@ -6,11 +6,17 @@ import GroupImg from "../assets/Images/Group.png";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { useContext } from "react";
 import Context from "../context/context.js";
+import { useLocation } from "react-router-dom";
+import ReportIssueImg from "../assets/Images/PaymentsHeader/ReportIssue.png";
+import DownloadImg from "../assets/Images/PaymentsHeader/Download.png";
+import HamburgerImg from "../assets/Images/PaymentsHeader/Hamburger.png";
 
 const Header = () => {
   const { isSideBarOpen, setIsSideBarOpen } = useContext(Context);
+  const location = useLocation();
+  console.log(location);
   return (
-    <div className=" sticky top-0 px-3 md:px-[32px] py-[12px] flex items-center justify-between h-[64px] bg-[#FFF] border-[#D9D9D9] border-b z-10">
+    <div className=" sticky top-0 px-3 md:px-[32px] py-[12px] flex items-center justify-between h-[64px] bg-[#FFF] border-[#D9D9D9] border-b">
       <div className=" md:hidden px-2 cursor-pointer">
         <GiHamburgerMenu
           fontSize="1.3rem"
@@ -44,16 +50,35 @@ const Header = () => {
         />
       </div>
 
-      <div className=" w-[360px] flex items-start justify-end gap-2">
-        {/* message div  */}
-
-        <div className=" w-[92px] h-[40px] gap-3 flex items-start">
-          <div className=" w-[40px] h-[40px] p-[10px] rounded-full bg-[#E6E6E6]">
-            <img src={GroupImg} alt="group-img" />
+      {location.pathname === "/payments" ? (
+        <div className=" w-[360px] h-[50px] flex justify-end">
+          <div className=" flex items-center gap-3">
+            <div className="flex items-center gap-[6px]">
+              <img src={ReportIssueImg} alt="report-issue-img" />
+              <p className=" font-Inter font-medium text-[13px] leading-4">
+                Need help?
+              </p>
+            </div>
+            <button className=" w-[40px] h-[40px] rounded-full bg-[#E6E6E6] flex items-center justify-center">
+              <img src={DownloadImg} alt="download-img" />
+            </button>
+            <button className=" w-[40px] h-[40px] rounded-full bg-[#E6E6E6] flex items-center justify-center">
+              <img src={HamburgerImg} alt="hamburger-img" />
+            </button>
           </div>
-          <img src={MenuImg} alt="menu-img" />
         </div>
-      </div>
+      ) : (
+        <div className=" w-[360px] flex items-start justify-end gap-2">
+          {/* message div  */}
+
+          <div className=" w-[92px] h-[40px] gap-3 flex items-start">
+            <div className=" w-[40px] h-[40px] p-[10px] rounded-full bg-[#E6E6E6]">
+              <img src={GroupImg} alt="group-img" />
+            </div>
+            <img src={MenuImg} alt="menu-img" />
+          </div>
+        </div>
+      )}
     </div>
   );
 };

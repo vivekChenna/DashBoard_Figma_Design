@@ -15,6 +15,7 @@ import UserIcon from "../assets/Images/UserIcon.png";
 import WalletIcon from "../assets/Images/walletIcon.png";
 import { useContext } from "react";
 import Context from "../context/context.js";
+import { Link } from "react-router-dom";
 
 const SideBar = () => {
   // flex flex-col justify-between
@@ -49,14 +50,16 @@ const SideBar = () => {
           </div>
         </div>
 
-        <button className=" px-4 py-2 flex gap-3 flex-1 items-center mt-[24px] hover:bg-[#FFFFFF1A] rounded ">
-          <div className=" w-[20px] h-[20px]">
-            <img src={NavbarIcon} alt="navbar-icon" />
-          </div>
-          <p className=" text-[14px] not-italic font-Inter font-medium leading-5 text-[#FFF] opacity-80 hover:opacity-100">
-            Home
-          </p>
-        </button>
+        <Link to="/">
+          <button className=" px-4 py-2 flex gap-3 flex-1 items-center mt-[24px] hover:bg-[#FFFFFF1A] rounded w-full">
+            <div className=" w-[20px] h-[20px]">
+              <img src={NavbarIcon} alt="navbar-icon" />
+            </div>
+            <p className=" text-[14px] not-italic font-Inter font-medium leading-5 text-[#FFF] opacity-80 hover:opacity-100">
+              Home
+            </p>
+          </button>
+        </Link>
 
         <button className=" px-4 py-2 flex gap-3 flex-1 items-center mt-2 hover:bg-[#FFFFFF1A] rounded">
           <div className=" w-[20px] h-[20px]">
@@ -94,14 +97,16 @@ const SideBar = () => {
           </p>
         </button>
 
-        <button className=" px-4 py-2 flex gap-3 flex-1 items-center mt-2 hover:bg-[#FFFFFF1A] rounded">
-          <div className=" w-[20px] h-[20px]">
-            <img src={PaymentsIcon} alt="payments-icon" />
-          </div>
-          <p className="text-[14px] not-italic font-Inter font-medium leading-5 text-[#FFF] opacity-80 hover:opacity-100">
-            Payments
-          </p>
-        </button>
+        <Link to="/payments">
+          <button className=" px-4 py-2 flex gap-3 flex-1 items-center mt-2 hover:bg-[#FFFFFF1A] rounded w-full">
+            <div className=" w-[20px] h-[20px]">
+              <img src={PaymentsIcon} alt="payments-icon" />
+            </div>
+            <p className="text-[14px] not-italic font-Inter font-medium leading-5 text-[#FFF] opacity-80 hover:opacity-100">
+              Payments
+            </p>
+          </button>
+        </Link>
 
         <button className=" px-4 py-2 flex gap-3 flex-1 items-center mt-2 hover:bg-[#FFFFFF1A] rounded">
           <div className=" w-[20px] h-[20px]">

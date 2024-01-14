@@ -35,7 +35,7 @@ const TransactionsRecord = () => {
   };
 
   return (
-    <div className="mt-[20px] px-3 pt-3 pb-6 bg-white rounded-lg relative  shadow-[0px 2px 6px 0px rgba(26, 24, 30, 0.04)]">
+    <div className="mt-[20px] px-3 pt-3 pb-6 bg-white rounded-lg relative -z-10  shadow-[0px 2px 6px 0px rgba(26, 24, 30, 0.04)]">
       {/*search by order id div  */}
 
       <div className=" w-60 px-4 py-[10px] flex gap-2 flex-1 items-center border border-[#D9D9D9] rounded-md">
