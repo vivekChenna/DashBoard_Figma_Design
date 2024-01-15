@@ -46,14 +46,14 @@ const NextPageSection = ({
 
           {arr.map((val, index) => {
             return (
-              <div
+              <button
                 key={index}
                 className=" py-[2px] w-7 h-7 flex gap-2 rounded flex-col justify-center items-center"
               >
                 <p className=" text-[14px] not-italic font-normal leading-5 font-Inter text-[#4D4D4D]">
                   {val}
                 </p>
-              </div>
+              </button>
             );
           })}
         </div>
