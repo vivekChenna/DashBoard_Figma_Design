@@ -1,7 +1,5 @@
-import React, { useContext } from "react";
-import RightArrowImg from "../assets/Images/right-arrow.png";
-import ChevronRight from "../assets/Images/chevron-right.png";
-import Context from "../context/context";
+import RightArrowImg from "../../assets/Images/OrdersPage/right-arrow.png";
+import ChevronRight from "../../assets/Images/OrdersPage/chevron-right.png";
 
 const NextPageSection = ({
   currentPage,

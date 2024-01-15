@@ -1,8 +1,8 @@
-import React, { useContext, useEffect, useState } from "react";
-import InfoImg from "../assets/Images/Info.png";
-import TriangleIcon from "../assets/Images/Triangle-Icon.png";
+import React, { useEffect } from "react";
+import InfoImg from "../../assets/Images/OrdersPage/Info.png";
+import TriangleIcon from "../../assets/Images/OrdersPage/Triangle-Icon.png";
 import SingleOrder from "./SingleOrder";
-import { UserData } from "../constants/constant";
+import { UserData } from "../../constants/constant";
 
 const AllOrders = ({
   inputSearch,

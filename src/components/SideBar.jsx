@@ -1,18 +1,18 @@
 import React from "react";
-import NishyanIcon from "../assets/Images/NishyanIcon.png";
-import ChevronDownImg from "../assets/Images/chevron_down.png";
-import NavbarIcon from "../assets/Images/Navbar_Icon.png";
-import OrdersIcon from "../assets/Images/Orders_Icon.png";
-import ProductsIcon from "../assets/Images/Products_Icon.png";
-import DeliveryIcon from "../assets/Images/Delivery_Icon.png";
-import MarketingIcon from "../assets/Images/Marketing_Icon.png";
-import PaymentsIcon from "../assets/Images/Payments_Icon.png";
-import PluginIcon from "../assets/Images/Plugin_Icon.png";
-import DiscountsIcon from "../assets/Images/Discounts_Icon.png";
-import ToolsIcon from "../assets/Images/Tools_Icon.png";
-import AppearanceIcon from "../assets/Images/Appearance_Icon.png";
-import UserIcon from "../assets/Images/UserIcon.png";
-import WalletIcon from "../assets/Images/walletIcon.png";
+import NishyanIcon from "../assets/Images/OrdersPage/NishyanIcon.png";
+import ChevronDownImg from "../assets/Images/OrdersPage/chevron_down.png";
+import NavbarIcon from "../assets/Images/OrdersPage/Navbar_Icon.png";
+import OrdersIcon from "../assets/Images/OrdersPage/Orders_Icon.png";
+import ProductsIcon from "../assets/Images/OrdersPage/Products_Icon.png";
+import DeliveryIcon from "../assets/Images/OrdersPage/Delivery_Icon.png";
+import MarketingIcon from "../assets/Images/OrdersPage/Marketing_Icon.png";
+import PaymentsIcon from "../assets/Images/OrdersPage/Payments_Icon.png";
+import PluginIcon from "../assets/Images/OrdersPage/Plugin_Icon.png";
+import DiscountsIcon from "../assets/Images/OrdersPage/Discounts_Icon.png";
+import ToolsIcon from "../assets/Images/OrdersPage/Tools_Icon.png";
+import AppearanceIcon from "../assets/Images/OrdersPage/Appearance_Icon.png";
+import UserIcon from "../assets/Images/OrdersPage/UserIcon.png";
+import WalletIcon from "../assets/Images/OrdersPage/walletIcon.png";
 import { useContext } from "react";
 import Context from "../context/context.js";
 import { Link } from "react-router-dom";
@@ -61,14 +61,16 @@ const SideBar = () => {
           </button>
         </Link>
 
-        <button className=" px-4 py-2 flex gap-3 flex-1 items-center mt-2 hover:bg-[#FFFFFF1A] rounded">
-          <div className=" w-[20px] h-[20px]">
-            <img src={OrdersIcon} alt="Orders-icon" />
-          </div>
-          <p className=" text-[14px] not-italic font-Inter font-medium leading-5 text-[#FFF] opacity-80 hover:opacity-100">
-            Orders
-          </p>
-        </button>
+        <Link to="/orders">
+          <button className=" px-4 py-2 flex gap-3 flex-1 items-center mt-2 hover:bg-[#FFFFFF1A] rounded w-full">
+            <div className=" w-[20px] h-[20px]">
+              <img src={OrdersIcon} alt="Orders-icon" />
+            </div>
+            <p className=" text-[14px] not-italic font-Inter font-medium leading-5 text-[#FFF] opacity-80 hover:opacity-100">
+              Orders
+            </p>
+          </button>
+        </Link>
 
         <button className=" px-4 py-2 flex gap-3 flex-1 items-center mt-2 hover:bg-[#FFFFFF1A] rounded">
           <div className=" w-[20px] h-[20px]">

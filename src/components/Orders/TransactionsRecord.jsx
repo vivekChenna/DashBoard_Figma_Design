@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
-import BoldSearch from "../assets/Search.png";
-import SortImg from "../assets/Images/sort.png";
-import DownloadImg from "../assets/Images/download.png";
+import BoldSearch from "../../assets/Images/OrdersPage/Search.png";
+import SortImg from "../../assets/Images/OrdersPage/sort.png";
+import DownloadImg from "../../assets/Images/OrdersPage/download.png";
 import AllOrders from "./AllOrders";
 import NextPageSection from "./NextPageSection";
-import { UserData } from "../constants/constant";
+import { UserData } from "../../constants/constant";
 
 const TransactionsRecord = () => {
   const [inputSearch, setInputSearch] = useState("");

@@ -1,8 +1,8 @@
 import React from "react";
-import HelpImg from "../assets/Images/Help.png";
-import SearchImg from "../assets/Images/search.png";
-import MenuImg from "../assets/Images/Menu.png";
-import GroupImg from "../assets/Images/Group.png";
+import HelpImg from "../assets/Images/OrdersPage/Help.png";
+import SearchImg from "../assets/Images/OrdersPage/search.png";
+import MenuImg from "../assets/Images/OrdersPage/Menu.png";
+import GroupImg from "../assets/Images/OrdersPage/Group.png";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { useContext } from "react";
 import Context from "../context/context.js";
@@ -14,7 +14,6 @@ import HamburgerImg from "../assets/Images/PaymentsHeader/Hamburger.png";
 const Header = () => {
   const { isSideBarOpen, setIsSideBarOpen } = useContext(Context);
   const location = useLocation();
-  console.log(location);
   return (
     <div className=" sticky top-0 px-3 md:px-[32px] py-[12px] flex items-center justify-between h-[64px] bg-[#FFF] border-[#D9D9D9] border-b">
       <div className=" md:hidden px-2 cursor-pointer">
@@ -24,21 +23,27 @@ const Header = () => {
         />
       </div>
 
-      <div className=" w-[360px] flex gap-4 items-center">
-        {/*payment div */}
-        <p className=" text-[15px] font-normal leading-[22px] not-italic text-[#1A181E] font-Inter">
-          Payments
-        </p>
-
-        <div className=" flex gap-[6px] items-center">
-          <div className=" w-[14px] h-[14px]">
-            <img src={HelpImg} alt="help-img" />
-          </div>
-          <p className=" leading-4 text-[12px] font-normal text-[#4D4D4D] font-Inter">
-            How it Works
+      {location.pathname === "/" ? (
+        <h1 className=" font-Inter font-medium text-[20px] leading-7 text-[#1A181E] w-[300px]">
+          Home
+        </h1>
+      ) : (
+        <div className=" w-[360px] flex gap-4 items-center">
+          {/*payment div */}
+          <p className=" text-[15px] font-normal leading-[22px] not-italic text-[#1A181E] font-Inter">
+            Payments
           </p>
+
+          <div className=" flex gap-[6px] items-center">
+            <div className=" w-[14px] h-[14px]">
+              <img src={HelpImg} alt="help-img" />
+            </div>
+            <p className=" leading-4 text-[12px] font-normal text-[#4D4D4D] font-Inter">
+              How it Works
+            </p>
+          </div>
         </div>
-      </div>
+      )}
 
       <div className=" w-[400px] h-[40px] py-[9px] px-4 flex items-center gap-2 bg-[#F2F2F2] rounded-md">
         {/* search div */}
@@ -50,7 +55,7 @@ const Header = () => {
         />
       </div>
 
-      {location.pathname === "/payments" ? (
+      {location.pathname === "/payments" || location.pathname === "/" ? (
         <div className=" w-[360px] h-[50px] flex justify-end">
           <div className=" flex items-center gap-3">
             <div className="flex items-center gap-[6px]">
