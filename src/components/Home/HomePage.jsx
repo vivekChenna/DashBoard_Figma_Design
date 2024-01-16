@@ -6,10 +6,10 @@ import FooterSection from "./FooterSection";
 
 const HomePage = () => {
   return (
-    <div className=" px-8 pt-8">
+    <div className=" px-8 pt-8 flex flex-col">
       {/* header component */}
 
-      <div className=" px-3 py-1 bg-[#E50B201A] h-[54px] flex items-center justify-between border border-red-400  rounded-md">
+      <div className=" md:px-3 md:py-1 md:mx-0 mx-2 py-2 px-3 bg-[#E50B201A] md:h-[54px] flex md:flex-row md:gap-0 gap-2 flex-col items-center justify-between border border-red-400  rounded-md">
         <div className=" flex items-center gap-[10px] ">
           <img src={AlertImg} alt="alert-img" />
           <div>

@@ -5,7 +5,7 @@ import { PiToggleRightFill } from "react-icons/pi";
 const ManualPaymentMethod = () => {
   const [toggleManualSwitch, setToggleManualSwitch] = useState(false);
   return (
-    <div className=" mt-6 p-4 bg-white w-[760px] h-[114px] shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)] rounded">
+    <div className=" md:mx-0 mx-4 mt-6 md:p-4 p-2 bg-white md:w-[760px] h-[114px] shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)] rounded">
       <div className="flex items-center justify-between">
         <p>Manual payment methods</p>
         {toggleManualSwitch ? (

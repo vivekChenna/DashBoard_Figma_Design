@@ -35,7 +35,7 @@ const AllOrders = ({
           </p>
         </div>
 
-        <div className=" w-[246px] flex flex-1 items-center gap-1">
+        <div className=" md:w-[246px] flex flex-1 items-center gap-1">
           <p className=" font-Inter text-[14px] not-italic font-medium leading-[20px] text-[#4D4D4D]">
             Order Date
           </p>

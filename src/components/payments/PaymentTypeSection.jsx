@@ -78,9 +78,9 @@ const PaymentTypeSection = () => {
         </button>
       </div>
 
-      <div className=" flex items-center gap-6 justify-between mt-4">
+      <div className=" flex items-center md:gap-6 gap-3 justify-between mt-4">
         <div className=" flex items-center gap-4">
-          <div className=" flex items-center gap-4">
+          <div className=" flex items-center md:gap-4 gap-2">
             <img src={CODImg} alt="COD-icon" />
             <div>
               <p className=" font-medium text-[16px] leading-6 text-[#1A181E] ">

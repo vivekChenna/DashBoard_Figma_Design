@@ -22,7 +22,7 @@ const CashFreePaymentApiModal = ({ closeModal }) => {
       {isOpenPaymentModal ? (
         <PaymentMethods closeModal={closePaymentMethodsModal} />
       ) : (
-        <div className=" w-[564px] h-[442px] bg-white rounded-md p-6">
+        <div className=" md:w-[564px] md:h-[442px] bg-white rounded-md md:p-6 p-4">
           <div className=" flex items-center justify-between">
             <h1 className=" font-medium text-[18px] leading-[26px]">
               Set up Cashfree Payments

@@ -14,7 +14,7 @@ import AmazonIcon from "../../assets/Images/PaymentMethod/Amazon.png";
 
 const PaymentMethods = ({ closeModal }) => {
   return (
-    <div className=" w-[564px] bg-white rounded-md pb-3">
+    <div className=" md:w-[564px] w-[400px] bg-white rounded-md pb-3">
       <div className=" px-6 py-4 flex items-center justify-between">
         <h1 className=" font-medium text-[18px] leading-[26px] text-[#1A181E]">
           Choose payment methods
@@ -27,7 +27,7 @@ const PaymentMethods = ({ closeModal }) => {
         />
       </div>
 
-      <div className=" h-[598px] px-6 overflow-y-scroll [&::-webkit-scrollbar]:hidden">
+      <div className=" md:h-[598px] h-[300px] px-6 overflow-y-scroll [&::-webkit-scrollbar]:hidden">
         {/* visa card */}
         <div className=" flex items-center justify-between">
           <div className=" flex items-center gap-4">

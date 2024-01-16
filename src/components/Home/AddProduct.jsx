@@ -2,11 +2,11 @@ import React from "react";
 
 const AddProduct = ({ name, img }) => {
   return (
-    <div
+    <div 
       className={
         name === "Add New shortcut"
-          ? " py-[42px] px-4 border-2 border-dashed w-[229.33px] rounded-md h-[108px]"
-          : " p-4 border border-[#E6E6E6] w-[229.33px] rounded-md h-[108px]"
+          ? " py-[42px] px-4 border-2 border-dashed md:w-[229.33px] w-[180px] rounded-md md:h-[108px] cursor-pointer"
+          : " p-4 border border-[#E6E6E6] md:w-[229.33px] w-[180px] rounded-md md:h-[108px] cursor-pointer"
       }
     >
       <div

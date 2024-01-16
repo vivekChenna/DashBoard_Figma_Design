@@ -20,7 +20,7 @@ import { Link } from "react-router-dom";
 const SideBar = () => {
   // flex flex-col justify-between
 
-  const { isSideBarOpen } = useContext(Context);
+  const { isSideBarOpen, setIsSideBarOpen } = useContext(Context);
 
   return (
     <div
@@ -50,7 +50,7 @@ const SideBar = () => {
           </div>
         </div>
 
-        <Link to="/">
+        <Link to="/" onClick={() => setIsSideBarOpen(false)}>
           <button className=" px-4 py-2 flex gap-3 flex-1 items-center mt-[24px] hover:bg-[#FFFFFF1A] rounded w-full">
             <div className=" w-[20px] h-[20px]">
               <img src={NavbarIcon} alt="navbar-icon" />
@@ -61,7 +61,7 @@ const SideBar = () => {
           </button>
         </Link>
 
-        <Link to="/orders">
+        <Link to="/orders" onClick={() => setIsSideBarOpen(false)}>
           <button className=" px-4 py-2 flex gap-3 flex-1 items-center mt-2 hover:bg-[#FFFFFF1A] rounded w-full">
             <div className=" w-[20px] h-[20px]">
               <img src={OrdersIcon} alt="Orders-icon" />
@@ -99,7 +99,7 @@ const SideBar = () => {
           </p>
         </button>
 
-        <Link to="/payments">
+        <Link to="/payments" onClick={() => setIsSideBarOpen(false)}>
           <button className=" px-4 py-2 flex gap-3 flex-1 items-center mt-2 hover:bg-[#FFFFFF1A] rounded w-full">
             <div className=" w-[20px] h-[20px]">
               <img src={PaymentsIcon} alt="payments-icon" />
